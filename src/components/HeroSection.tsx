@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Download, MessageCircle } from 'lucide-react';
-import heroPortrait from '@/assets/hero-portrait.jpg';
+import heroPortrait from '@/assets/kishore-profile.jpg';
 
 const HeroSection = () => {
   const scrollToContact = () => {
