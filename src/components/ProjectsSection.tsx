@@ -37,8 +37,8 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 hover:scale-105 transition-transform duration-300 cursor-default">Projects</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore my latest projects and creative solutions
           </p>
@@ -46,10 +46,10 @@ const ProjectsSection = () => {
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <Card key={index} className={`hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${project.color} border-2 group h-full flex flex-col`}>
+            <Card key={index} className={`hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-105 ${project.color} border-2 group h-full flex flex-col animate-fade-in`} style={{ animationDelay: `${index * 0.2}s` }}>
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-primary-light">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-primary-light group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                     <project.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex flex-col items-end space-y-1">
@@ -101,17 +101,17 @@ const ProjectsSection = () => {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="flex-1 border-primary/20 text-primary hover:bg-primary hover:text-white transition-colors"
+                      className="flex-1 border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 group/btn"
                     >
-                      <Github className="w-4 h-4 mr-2" />
+                      <Github className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
                       Code
                     </Button>
                     <Button 
                       size="sm" 
-                      className="flex-1 bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary"
+                      className="flex-1 bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg group/btn"
                       disabled={project.status === 'Concept'}
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
+                      <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
                       {project.status === 'Live' ? 'View' : 'Preview'}
                     </Button>
                   </div>
@@ -121,8 +121,8 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <Card className="max-w-2xl mx-auto border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-primary-light/5">
+        <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <Card className="max-w-2xl mx-auto border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-primary-light/5 hover:shadow-lg hover:scale-105 transition-all duration-300 group">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-primary mb-4">More Projects Coming Soon</h3>
               <p className="text-lg text-foreground leading-relaxed mb-6">
@@ -131,9 +131,9 @@ const ProjectsSection = () => {
               </p>
               <Button 
                 variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-white"
+                className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg group/btn"
               >
-                <Github className="w-4 h-4 mr-2" />
+                <Github className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
                 View GitHub Profile
               </Button>
             </CardContent>

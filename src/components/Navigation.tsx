@@ -29,7 +29,8 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-primary">
+          <div className="text-xl font-bold text-primary hover:scale-105 transition-transform duration-300 cursor-pointer"
+               onClick={() => scrollToSection('home')}>
             Venkata Kishore
           </div>
           
@@ -40,9 +41,9 @@ const Navigation = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => scrollToSection(section)}
-                className={`capitalize transition-colors duration-200 ${
+                className={`capitalize transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 ${
                   activeSection === section 
-                    ? 'text-primary bg-primary/10' 
+                    ? 'text-primary bg-primary/10 shadow-sm' 
                     : 'text-foreground hover:text-primary hover:bg-primary/5'
                 }`}
               >
@@ -54,7 +55,7 @@ const Navigation = () => {
           <Button
             onClick={() => scrollToSection('contact')}
             size="sm"
-            className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary"
+            className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg"
           >
             Contact Me
           </Button>

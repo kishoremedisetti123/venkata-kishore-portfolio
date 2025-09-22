@@ -62,8 +62,8 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-section-bg">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 hover:scale-105 transition-transform duration-300 cursor-default">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Feel free to connect with me, and let's make something extraordinary together!
           </p>
@@ -71,7 +71,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="border-2 border-primary/20 shadow-lg">
+          <Card className="border-2 border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <CardHeader>
               <h3 className="text-2xl font-bold text-primary">Send a Message</h3>
               <p className="text-muted-foreground">
@@ -123,10 +123,10 @@ const ContactSection = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 group"
                   size="lg"
                 >
-                  <Send className="w-5 h-5 mr-2" />
+                  <Send className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
                   Send Message
                 </Button>
               </form>
@@ -134,8 +134,8 @@ const ContactSection = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <Card className="border-2 border-primary/20 shadow-lg">
+          <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <Card className="border-2 border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <h3 className="text-2xl font-bold text-primary">Contact Information</h3>
                 <p className="text-muted-foreground">
